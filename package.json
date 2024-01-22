@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Josh Solomon",
+  "author": "Chuan He",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
