@@ -1,12 +1,12 @@
 {
-  "name": "ssd-2850-p01-starter",
+  "name": "ssd-2850-p01-Vulcan",
   "version": "1.0.0",
   "description": "Structure and Gulpfile for Coding Challenge Project",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Chuan He",
+  "author": "Sylvio, Yurii, Chuan",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
