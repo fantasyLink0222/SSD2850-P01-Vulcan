@@ -1,7 +1,40 @@
+@use "sass:math";
 
+// Colors
+$brand-color: rgba(58, 58, 58, 0.7);
+$body-bg-color: white;
+$wrapper-bg-color: white;
+// Text Colors`
+$text-color-dark: black;
+$text-color-grey: rgb(82, 79, 79);
+$text-color-light: white;
+$text-color-blue: #009DDC;
+$text-color-dark-blue: darken($text-color-blue, 20);;
 
-//- Heading Font: Roboto Condensed - Weights: 400, 700
-// Body Content Font: Roboto - Weights: 400, 500, 700 - Styles: 400i 
+// Use Color functions to brighten and darken colors
+$brand-color-dark: darken($brand-color, 20);
+$brand-color-light: lighten($brand-color, 20);
 
-$heading-font: 'Roboto Condensed', sans-serif;
+// Fonts
 $body-font: 'Roboto', sans-serif;
+$heading-font: 'Roboto Condensed', sans-serif;
+$nav-font: 'Roboto', sans-serif;
+// Typographic Defualts
+$line-height: 1.4;
+$heading-font-weight: 600;
+
+// Function to
+// Convert Px to Ems
+@function em($px, $bc: 16){
+    @return #{math.div($px, $bc)}em;
+}
+
+// Media Query Breakpoints
+$desktopMedium: em(1251);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$phoneLandscape: em(670);
+$phonePortrait: em(420);
+
+// Utility variables
+$lps: '&:hover, &:focus, &:active';
