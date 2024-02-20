@@ -1,0 +1,36 @@
+// Mixins for creating a flex row of
+// and evenly spacing out the
+// elements along the row
+@mixin flex-layout-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+// Mixin for clearing out
+// margins and padding and
+// setting the line-height to 1 
+// ...useful mainly on typographic elements
+@mixin flatten($list: false) {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    @if($list == true){
+        list-style: none;
+    }
+}
+
+// Media Query Mixin
+@mixin mq($w){
+    @media (min-width: $w){
+        @content;
+    }
+}
+
+// Mixin to set links
+// to not have their
+// default look
+@mixin plain-link($c: white){
+    text-decoration: none;
+    color: $c;
+}

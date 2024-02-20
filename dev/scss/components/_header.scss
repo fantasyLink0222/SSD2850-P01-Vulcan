@@ -1,50 +1,176 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
-header {
-  font-family: $heading-font;
-  background-color: blue($color: #000000);
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  @include box-shadow;
-  @include transition(all 0.3s ease-in-out);
-  @include media-query('sm') {
-    padding: 2rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-    margin: 0;
-  }
-  .header__logo {
-    width: 100px;
-    height: auto;
-    .img {
-      width: 100%;
-      height: auto;
-    }
-  }
-  nav {
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      li {
-        margin: 0 1rem;
-        a {
-          color: $white;
-          text-decoration: none;
-          @include transition(all 0.3s ease-in-out);
-          &:hover {
-            color: $secondary-color;
-          }
-        }
+// Header
+
+.slideshow {
+  position: relative;
+}
+
+.slideshow img {
+  width: 1440px;
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any default inline spacing */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Positioned above the slideshow images */
+  /* Add more styling for your overlay content here */
+  align-items: center;
+  
+}
+
+/*top menu*/
+
+.info-bar {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  gap: 40px;
+  font-family: $nav-font;
+  width: 80%;
+  
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  li {
+    a {
+      text-decoration: none;
+      color: $text-color-light;
+      font-size: 1.2em;
+      transition: color 0.3s;
+      &:hover {
+        color: $text-color-dark-blue;
       }
     }
   }
 }
 
-// Remove the empty backticks
-// Replace with your desired code
+/* Styles for the logo, navigation bar, heading, and buttons */
+.vulcan-logo, .vulcan-logo-interior {
+  display: block;
+  text-indent: -9999px;
+  width: 99px;
+  height: 40.89px;
+  // background: url( ../../images/wave-white.png) no-repeat;
+  background-size: 99px 40.89px;
 
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px){
+    .vulcan-logo {
+    width: 160px;
+    height: 66.09px;
+    background-size: 160px 66.09px;
+    }
+}
+  
+.nav-bar {
+  font-family: $body-font; 
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: #fff; /* White text color */
+  text-transform: uppercase; /* Make all menu items uppercase */
+  font-weight: 600; /* Make the font a bit bolder */
+  display: flex; /* Use flexbox to align items */
+  justify-content:space-around; /* Even space distribution */
+  align-items: center; /* Vertically align items in the middle */
+  padding: 10px 0; /* Add some padding above and below the nav items */
+}
+
+/* Style the individual navigation links */
+.nav-bar a {
+  color: inherit; /* Inherit the white color from the nav-bar */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px 15px; /* Add some padding to the links */
+  transition: background-color 0.3s; /* Transition for the hover effect */
+}
+
+/* Add a hover effect on navigation links */
+.nav-bar a:hover {
+  background-color: #ffffff; /* Change background to white */
+  color: #000000; /* Change text color to black */
+}
+
+/* Add a container to wrap around the nav for layout purposes */
+.nav-container {
+ 
+  position: relative;
+  margin-top: 10px;
+  z-index: 2; /* Ensure it's above other content */
+}
+
+.text-and-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 100px;
+  width: 100%;
+  h1{
+    font-family: $heading-font;
+    font-size: 3.0em;
+    color: $text-color-light;
+    text-align: center;
+    margin: 0 0 30px;
+    padding: 0;
+    width: 80%;
+  }
+  .btn{
+    display: flex;
+    flex-direction: row;
+    
+    gap: 30px;
+    button{
+      background-color: transparent;
+      font-family: $nav-font;
+      color: $text-color-light;
+      padding: 11px 10px 10px;
+  
+      border: 2px solid $text-color-light;
+   
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      &:hover{
+        background-color: $text-color-dark-blue;
+      }
+    }
+  }
+  
+
+}
+@media screen and (min-width: $desktopMedium){
+  .nav-container {
+    width: 850px;
+    height: 76px;
+  }
+  .vulcan-logo{
+    width: 213px;
+    height: 88px;
+    background-size: auto;
+  
+  }
+}
+@media screen and (min-width: $tabletLandscape){
+  .nav-container {
+    width: 720px;
+  }
+  
+}
