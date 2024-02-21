@@ -30,7 +30,7 @@
   .navbar-menu li a {
     color: #d3e3e3;
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family:$nav-font;
     font-size: 1.6em;
     transition: all .5s;
   }
@@ -65,7 +65,7 @@
 
 .hamburger .line:nth-child(1) {
     background-color: white;
-    width: 24px;
+    width: 32px;
     margin-right: 8px;
 }
 
@@ -76,7 +76,7 @@
 
 .hamburger .line:nth-child(3) {
     background-color: white;
-    width: 24px;
+    width: 32px;
     margin-right: 8px
 }
   
