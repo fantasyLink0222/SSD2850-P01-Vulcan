@@ -1,0 +1,141 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.ham-nav{
+    height:58px;
+    background-color:rgba(58, 58, 58, 0.7); 
+}
+
+  //new navbar-menu
+
+    .navbar-menu {
+        background-color: rgba(58, 58, 58, 0.7);
+        position: absolute;
+        overflow: hidden;
+        max-height: 0;
+        width: 100%;
+        
+    }
+   .navbar-menu ul {
+        font-family: $nav-font;
+        
+        list-style-type: none;
+        
+        li{
+            font-size: 18px;
+            text-decoration: none;
+            width: 100%;
+            height: 30px;
+            line-height: 20px;
+            letter-spacing: 0;
+            padding: 0 0 0 18px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+        background-color: $text-color-blue;
+     }
+            }
+            a {
+                text-decoration: none;
+                color: $text-color-light;
+                font-family: $heading-font;
+                font-size: 1.2em;
+                transition: color 0.3s;  
+            }
+        }
+    
+    
+    .show-dropdown {
+        max-height: 500px; /* Set to a value that will definitely contain the whole dropdown */
+        transition: all 0.5s ease-out;
+    }
+  
+  
+  
+  @media screen and (min-width: $phoneLandscape){
+    // Remove the .hamburger .navbar-menu .ham-logo selector and its associated styles
+    
+   .ham-nav{
+       display: none;
+   }
+   
+
+  }
+  @media screen and (max-width: $phoneLandscape) {
+    header {
+      display: none;
+    }
+    .ham-logo{
+        display: block;
+        margin-left: 15px;
+        float: left;
+        margin-top: 9px;
+       
+        
+    }
+    .hamburger {
+        position: relative;
+        padding: 0;
+        float: left;
+        transition: opacity .3s;
+        top: auto;
+        display: block;
+        float: right;
+        margin-right: 15px;
+        margin-top: 9px;
+        
+      }
+   
+    .h1 h1 {
+      font-size: 3em;
+      left: 35%;
+    }
+    
+      
+      .hamburger:hover {
+        cursor: pointer;
+       
+      }
+      
+    .hamburger .line {
+        width: 32px;
+        height: 3px;
+        margin: 8px 0;
+        transition: all 0.3s ease-in-out;
+     
+    }
+    
+    .hamburger .line:nth-child(1) {
+        background-color: white;
+        width: 32px;
+        margin-right: 8px;
+    }
+    
+    .hamburger .line:nth-child(2) {
+        background-color: white;
+        width: 32px;
+    }
+    
+    .hamburger .line:nth-child(3) {
+        background-color: white;
+        width: 32px;
+        margin-right: 8px
+    }
+      
+      .hamburger.isactive .line:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.isactive .line:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+      }
+      
+      .hamburger.isactive .line:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+      }
+    
+   
+    
+  }
+  

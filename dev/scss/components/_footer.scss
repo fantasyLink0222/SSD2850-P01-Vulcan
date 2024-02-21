@@ -1,0 +1,31 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Footer
+footer {
+    background-color: $body-bg-color;
+    display: flex;
+    flex-direction: row;
+    background-color: $text-color-blue;
+    
+}
+.footer-wrapper{
+    display: flex;
+    width: 100%;
+
+
+}
+.footer-holder {
+   
+        background-repeat: no-repeat;
+        background-image: url("../../images/wave-blue-light.png");
+        width: 100%;
+    
+}
+.vulcan-logo-ft{
+    display: block;
+    text-indent: -9999px;
+    width: 400px;
+    height: auto;
+    background-size: auto 100%;
+   }

@@ -39,6 +39,7 @@
 
 .square1_next_image,
 .square1_prev_image {
+    display: none;
     position: absolute;
     top: 50%;
     left: 20px;
@@ -66,11 +67,12 @@
     transform: translate(0, -50%) rotate(180deg);
     left: auto;
     right: 20px;
+    display: none;
 }
 
 .square1_dots {
     position: absolute;
-    bottom: 0;
+    bottom: 15%;
     left: 0;
     width: 100%;
     text-align: center;
@@ -94,17 +96,17 @@
     width: 16px;
     height: 16px;
     border-radius: 8px;
-    background: rgba(0, 0, 0, 0.3);
+    background: #FFFF;
     box-shadow: 0 0 14px 0 rgba(255, 255, 255, 0.4);
 }
 
 .square1_dots span.current:before {
-    background: rgba(0, 0, 0, 1);
+    background: #009DDC;
 }
 
 .square1_dots span:hover:before {
-    background: rgba(0, 0, 0, 1);
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
+    background: #009DDC;
+    box-shadow: 0 0 2px#337AB7;
 }
 
 .square1_spinner {
@@ -288,5 +290,14 @@
     .square1_spinner {
         width: 20px;
         height: 20px;
+    }
+    .square1_dots span:before {
+        content: " ";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background: #FFFF;
+        box-shadow: 0 0 7px 0 rgba(255, 255, 255, 0.4);
     }
 }

@@ -30,10 +30,10 @@ $heading-font-weight: 600;
 }
 
 // Media Query Breakpoints
-$desktopMedium: em(1251);
+$desktopMedium: em(1440);
 $tabletLandscape: em(1024);
-$tabletPortrait: em(850);
-$phoneLandscape: em(670);
+
+$phoneLandscape: em(768);
 $phonePortrait: em(420);
 
 // Utility variables
