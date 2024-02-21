@@ -1,10 +1,9 @@
-// Hamburger menu
-let hamburger = document.querySelector('.hamburger');
-let menu = document.querySelector('.navbar-menu');
-let bod = document.querySelector('.container');
+// Get the elements
+const hamburger = document.querySelector('.hamburger');
+const dropdown = document.querySelector('.navbar-menu');
 
+// Add event listener to the hamburger menu
 hamburger.addEventListener('click', function() {
   hamburger.classList.toggle('isactive');
-  menu.classList.toggle('active');
-
-});
+    dropdown.classList.toggle('show-dropdown');
+})
