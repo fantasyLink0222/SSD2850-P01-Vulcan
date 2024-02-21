@@ -1,0 +1,158 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.navbar-menu {
+    background-color: $brand-color-dark;
+    width: 25%;
+    height: 100vh;
+    display: none;
+  }
+  
+  .navbar-menu ul {
+    overflow: hidden;
+    list-style-type: none;
+    padding-top: 50%;
+    margin: 0;
+  }
+  
+  .navbar-menu li {
+    display: block;
+    margin: 0;
+    padding: 5% 50px;
+    width: 100%;
+  }
+  
+  .navbar-menu li:hover {
+    cursor: pointer;
+  }
+  
+  
+  .navbar-menu li a {
+    color: #d3e3e3;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6em;
+    transition: all .5s;
+  }
+  
+  .navbar-menu li:hover {
+    cursor: pointer;
+    background-color: #ce3939;
+    letter-spacing: 10px;
+  }
+  
+  .hamburger {
+    margin-left: 15px ;
+    position: relative;
+    padding: 0;
+    float: left;
+    transition: opacity .3s;
+  }
+  
+  .hamburger:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+  
+.hamburger .line {
+    width: 32px;
+    height: 2px;
+    background: rgb(236, 66, 66);
+    margin: 8px 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.hamburger .line:nth-child(1) {
+    background-color: white;
+    width: 24px;
+    margin-right: 8px;
+}
+
+.hamburger .line:nth-child(2) {
+    background-color: white;
+    width: 32px;
+}
+
+.hamburger .line:nth-child(3) {
+    background-color: white;
+    width: 24px;
+    margin-right: 8px
+}
+  
+  .hamburger.isactive .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.isactive .line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .hamburger.isactive .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  .navbar-menu {
+    transition: all 2s ease-in-out;
+  }
+  
+  .navbar-menu.active {
+    display: block;
+    animation: fade .5s;
+  }
+  
+  @keyframes fade {
+    from{transform: translateX(-200px); opacity: 0;}
+    to {transform: translateX(0px); opacity: 1;}
+  }
+  
+  @media screen and (min-width: $phoneLandscape){
+    .hamburger {
+      display: none;
+    }
+    
+  }
+  @media screen and (max-width: $phoneLandscape) {
+    header {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+      top: 0;
+    }
+    .h1 h1 {
+      font-size: 3em;
+      left: 35%;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        height: 100vh;
+        width: 300px;
+        padding: 64px 0px;
+        overflow: auto;
+        background-color: var(--oxynav-neutral-color);
+        box-shadow: 0px 12.5px 10px rgba(0, 0, 0, 0.035), 0px 100px 80px rgba(0, 0, 0, 0.07);
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        z-index: 9999;
+        background-color: #333;
+
+    }
+    
+    .navbar-menu ul {
+      padding-left: 0%;
+    }
+    
+    .navbar-menu li {
+      padding: 3% 0;
+    }
+    
+    .navbar-menu li a {
+      font-size: 1.2em;
+    }
+    
+  }
+  
