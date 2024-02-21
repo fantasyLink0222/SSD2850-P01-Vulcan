@@ -1,4 +1,4 @@
-$('.example').square1({
+$('.header-slider').square1({
 
     // use slide transition
     animation: 'slide',

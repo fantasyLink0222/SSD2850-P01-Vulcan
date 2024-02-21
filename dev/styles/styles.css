@@ -3,7 +3,7 @@
 }
 
 .slideshow img {
-  width: 1440px;
+  width: 100%;
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any default inline spacing */
 }
@@ -47,14 +47,6 @@ nav ul li a:hover {
 }
 
 /* Styles for the logo, navigation bar, heading, and buttons */
-.vulcan-logo, .vulcan-logo-interior {
-  display: block;
-  text-indent: -9999px;
-  width: 99px;
-  height: 40.89px;
-  background-size: 99px 40.89px;
-}
-
 header {
   display: flex;
   justify-content: center;
@@ -138,6 +130,17 @@ header {
   background-color: #005476;
 }
 
+.wave-white {
+  position: relative; /* or absolute */
+  z-index: 3;
+  margin-top: -90px;
+  overflow: hidden;
+}
+.wave-white img {
+  width: 100%;
+  height: 150px;
+}
+
 @media screen and (min-width: 90em) {
   .nav-container {
     width: 850px;
@@ -152,6 +155,21 @@ header {
 @media screen and (min-width: 64em) {
   .nav-container {
     width: 720px;
+  }
+}
+@media screen and (max-width: 64em) {
+  .text-and-buttons h1 {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 0 20px;
+    padding: 0;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 48em) {
+  .wave-white img {
+    width: 140%;
+    height: 100px;
   }
 }
 .square1 {
@@ -228,7 +246,7 @@ header {
 
 .square1_dots {
   position: absolute;
-  bottom: 0;
+  bottom: 15%;
   left: 0;
   width: 100%;
   text-align: center;
@@ -252,17 +270,17 @@ header {
   width: 16px;
   height: 16px;
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.3);
+  background: white;
   box-shadow: 0 0 14px 0 rgba(255, 255, 255, 0.4);
 }
 
 .square1_dots span.current:before {
-  background: rgb(0, 0, 0);
+  background: #009DDC;
 }
 
 .square1_dots span:hover:before {
-  background: rgb(0, 0, 0);
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.4);
+  background: #009DDC;
+  box-shadow: 0 0 2px #337AB7;
 }
 
 .square1_spinner {
@@ -446,6 +464,15 @@ header {
     width: 20px;
     height: 20px;
   }
+  .square1_dots span:before {
+    content: " ";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 0 7px 0 rgba(255, 255, 255, 0.4);
+  }
 }
 * {
   margin: 0;
@@ -560,5 +587,30 @@ header {
   .hamburger.isactive .line:nth-child(3) {
     transform: translateY(-11px) rotate(-45deg);
   }
+}
+footer {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  background-color: #009DDC;
+}
+
+.footer-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.footer-holder {
+  background-repeat: no-repeat;
+  background-image: url("../../images/wave-blue-light.png");
+  width: 100%;
+}
+
+.vulcan-logo-ft {
+  display: block;
+  text-indent: -9999px;
+  width: 400px;
+  height: auto;
+  background-size: auto 100%;
 }
 /*# sourceMappingURL=styles.css.map */

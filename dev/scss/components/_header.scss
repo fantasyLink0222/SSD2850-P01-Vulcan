@@ -8,7 +8,7 @@
 }
 
 .slideshow img {
-  width: 1440px;
+  width: 100%;
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any default inline spacing */
 }
@@ -57,15 +57,7 @@ nav ul {
 }
 
 /* Styles for the logo, navigation bar, heading, and buttons */
-.vulcan-logo, .vulcan-logo-interior {
-  display: block;
-  text-indent: -9999px;
-  width: 99px;
-  height: 40.89px;
-  // background: url( ../../images/wave-white.png) no-repeat;
-  background-size: 99px 40.89px;
 
-}
 
 header{
   display: flex;
@@ -78,6 +70,7 @@ header{
     .vulcan-logo {
     width: 160px;
     height: 66.09px;
+    
     background-size: 160px 66.09px;
     }
 }
@@ -154,8 +147,20 @@ header{
       }
     }
   }
-  
 
+}
+
+.wave-white{
+  
+  position: relative; /* or absolute */
+  z-index: 3;
+  margin-top: -90px; 
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: 150px;
+  
+  }
 }
 @media screen and (min-width: $desktopMedium){
   .nav-container {
@@ -165,6 +170,7 @@ header{
   .vulcan-logo{
     width: 213px;
     height: 88px;
+    
     background-size: auto;
   
   }
@@ -172,6 +178,35 @@ header{
 @media screen and (min-width: $tabletLandscape){
   .nav-container {
     width: 720px;
+  }
+ 
+  
+}
+@media screen and (max-width:$tabletLandscape ) {
+  
+  
+  .text-and-buttons h1{
+   
+    font-size: 2.0em;
+    
+    text-align: center;
+    margin: 0 0 20px;
+    padding: 0;
+    width: 80%;
+  }
+
+  
+}
+
+@media screen and (max-width: $phoneLandscape){
+
+
+  .wave-white{
+
+    img{
+      width: 140%;
+      height: 100px;
+    }
   }
   
 }
