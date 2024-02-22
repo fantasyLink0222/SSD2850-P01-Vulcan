@@ -114,6 +114,9 @@ header {
 .text-and-buttons .btn {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 .text-and-buttons .btn button {
@@ -167,6 +170,9 @@ header {
   }
 }
 @media screen and (max-width: 48em) {
+  .btn {
+    width: 200px;
+  }
   .wave-white img {
     width: 140%;
     height: 100px;
@@ -606,11 +612,76 @@ footer {
   width: 100%;
 }
 
-.vulcan-logo-ft {
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  width: 80%;
+  margin-left: -10px;
+  margin-right: -10px;
+  max-width: 1200px;
+  align-items: center;
+}
+.row .footer-logo {
   display: block;
-  text-indent: -9999px;
-  width: 400px;
+  width: 213px;
   height: auto;
   background-size: auto 100%;
+}
+.row .footer-logo .vulcan-logo-ft {
+  width: 213px;
+  height: auto;
+}
+.row .footer-links {
+  display: flex;
+  margin-left: 6em;
+}
+.row .footer-links .footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.row .footer-links .footer-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+.row .footer-links .footer-list li a:hover {
+  color: #005476;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .row .footer-links {
+    margin-left: 0;
+    margin-top: 20px;
+    align-content: center;
+  }
+  .row .footer-links .footer-list {
+    align-items: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

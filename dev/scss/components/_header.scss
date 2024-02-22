@@ -129,6 +129,9 @@ header{
   .btn{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     
     gap: 30px;
     button{
@@ -200,7 +203,9 @@ header{
 
 @media screen and (max-width: $phoneLandscape){
 
-
+  .btn{
+    width: 200px;
+  }
   .wave-white{
 
     img{
