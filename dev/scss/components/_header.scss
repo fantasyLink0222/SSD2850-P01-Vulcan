@@ -50,7 +50,8 @@ nav ul {
       font-size: 1.2em;
       transition: color 0.3s;
       &:hover {
-        color: $text-color-dark-blue;
+        color: $brand-color-light;
+        background-color: $text-color-blue;
       }
     }
   }
@@ -66,14 +67,7 @@ header{
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px){
-    .vulcan-logo {
-    width: 160px;
-    height: 66.09px;
-    
-    background-size: 160px 66.09px;
-    }
-}
+
   
 .nav-bar {
   font-family: $body-font; 
@@ -124,7 +118,7 @@ header{
     text-align: center;
     margin: 0 0 30px;
     padding: 0;
-    width: 80%;
+    width: 72%;
   }
   .btn{
     display: flex;
@@ -132,21 +126,24 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
     
-    gap: 30px;
+    gap: 50px;
     button{
       background-color: transparent;
       font-family: $nav-font;
       color: $text-color-light;
       padding: 11px 10px 10px;
-  
+      text-wrap: none;
+      width: 150px;
       border: 2px solid $text-color-light;
-   
-      font-size: 1em;
+      font-weight: 600;
+      font-size: 16px;
       cursor: pointer;
       transition: background-color 0.3s;
       &:hover{
-        background-color: $text-color-dark-blue;
+        background-color: $text-color-light;
+        color: $text-color-blue;
       }
     }
   }
@@ -165,6 +162,29 @@ header{
   
   }
 }
+
+@media screen and (min-width: 1620px){
+  
+  header .vulcan-logo{
+    width: 213px;
+    height: 123.64px;
+    background-size: 300px 123.64px;
+  }
+  .text-and-buttons h1{
+   
+    font-size: 80px;
+    text-align: center;
+    margin:  -70px 0 100px;
+    line-height: 96px;
+  }
+  .text-and-buttons .btn{
+    margin-top: -20px;
+    button{
+      width: 198px;
+    }
+  }
+
+}
 @media screen and (min-width: $desktopMedium){
   .nav-container {
     width: 850px;
@@ -175,19 +195,33 @@ header{
     height: 88px;
     
     background-size: auto;
-  
   }
+  
+
 }
 @media screen and (min-width: $tabletLandscape){
-  .nav-container {
-    width: 720px;
+  .nav-bar{
+    width: 850px;
+    height: 76px;
   }
- 
   
 }
+
+@media screen and (min-width: $phoneLandscape){
+  header .vulcan-logo{
+    width: 213px;
+    height: 123.64px;
+    background-size: 213px 123.64px;
+  }
+  
+  }
+
 @media screen and (max-width:$tabletLandscape ) {
   
-  
+  .nav-bar{
+    width: 720px;
+    height: 40px;
+  }
   .text-and-buttons h1{
    
     font-size: 2.0em;
@@ -200,6 +234,7 @@ header{
 
   
 }
+
 
 @media screen and (max-width: $phoneLandscape){
 
