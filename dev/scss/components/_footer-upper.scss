@@ -1,0 +1,280 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Footer-upper, sign up for newsletter, contact us and map
+
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+
+
+.info-wrapper {
+    position: relative;
+    display: grid;
+    margin-bottom: em(75);
+    grid-template-areas:
+    "a"
+    "b"
+    "c";
+
+    .newsletter-signup {
+        background-color: rgba(190,220,239,255);
+        padding: em(25) em(10);
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .form-container {
+                display: flex;
+                flex-direction: column;
+                label {
+                    text-align: center;
+                    font-family: $body-font;
+                    color: #154a66;
+                    font-size: 1.27em;
+                    padding-bottom: em(5);
+                }
+                .input-container {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: row;
+                    input {
+                        padding: em(10);
+                        width: 100%;
+                        border: none;
+                        padding-left: em(20);
+                        outline: none;
+                    }
+                    button {
+                        padding:em(8) em(15);  
+                        background-color: $text-color-blue;
+                        border: none; 
+                        font-family: $heading-font;
+                        font-weight: 700;
+                        font-size: 1em;
+                        color: white;
+                        text-decoration: none; 
+                        text-transform: uppercase;
+                        margin-left: em(10);
+                        &:hover {
+                            background-color: #555;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact {
+        background-color: rgba(21,74,102,255);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        text-transform: uppercase;
+        justify-content: center;
+    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 374px;
+        h2 {
+            font-family: $body-font;
+            font-size: 2.1em;
+        }
+        a{
+            padding:em(10) em(14) ; 
+            margin: 0 auto;
+            background-color: transparent;
+            border: 1px solid #555;
+            color: #555;
+            font-family: $heading-font;
+            font-weight: 700;
+            text-decoration: none; 
+            margin-top: 40px;
+           
+        }
+    }
+
+    .find-install {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-image: url('../../images/map.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 334px;
+        justify-content: center;
+        color: #555;
+        text-transform: uppercase;
+        padding-top: em(20);
+        h2 {
+            margin: -50px;;
+            padding: 0;
+            font-size: 2.1em;
+            line-height: 1em;
+            margin-bottom: em(10);
+            font-family: $body-font;
+        }
+        a{
+            padding:em(10) em(14) ; 
+            margin: 0 auto;
+            background-color: transparent;
+            border: 1px solid #555;
+            color: #555;
+            font-family: $heading-font;
+            font-weight: 700;
+            text-decoration: none; 
+            
+        }
+    }
+
+   
+
+   
+
+    @include mq($phoneLandscape) {
+        margin-bottom: em(20);
+        grid-template-areas:
+        "a a"
+        "b c";
+        grid-template-columns: 1fr 1fr;
+        .newsletter-signup {
+            grid-area: a;
+            padding: em(20);
+            form {
+                display: flex;
+                align-items: center;
+                .form-container {
+                    display: block;
+                    margin: 0 auto;
+                    label {
+                        padding-right: em(10);
+                        float: left;
+                        padding-top: em(2);
+                    }
+                    .input-container {
+                        input {
+                            font-size: 1em;
+                            width: em(300);
+                            padding: em(7) em(15);
+                        }
+                        
+                        button {
+                            padding: em(0) em(15);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .contact {
+            grid-area: b;
+            margin-bottom: em(40);
+            a {
+                background-color: $text-color-blue;
+                color: white;
+                border: none;
+                margin-top: em(5);
+                &:hover {
+                    background-color: #555;
+                    color: white;
+                }
+            }
+        }
+
+        .find-install {
+            grid-area: c;
+            width: 100%;
+            background-size: cover;
+
+            a {
+                background-color: $text-color-blue;
+                color: white;
+                border: none;
+            }
+        }
+    }
+
+    @include mq($tabletLandscape) {
+        margin-bottom: em(10);
+
+        .contact {
+            h2 {
+                font-size: 2.5em;
+            }
+        }
+
+        .find-install {
+            h2 {
+                font-size: 2.5em;
+            }
+        }
+    }
+    @include mq($desktopMedium) {
+        .newsletter-signup {
+            form {
+                .form-container {
+                    label {
+                        padding-top: em(0);
+                        font-size: 1.7em;
+                    }
+
+                    .input-container {
+                        input {
+                            width: em(500);
+                            margin-top: em(2);
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact {
+            height: 500px;
+            h2 {
+                font-size: 2.7em;
+                padding-bottom: em(15);
+            }
+
+            a {
+                padding: em(10) em(40);
+            }
+        }
+
+        .find-install {
+            height: 500px;
+            h2 {
+                font-size: 2.7em;
+                padding-bottom: em(20);
+            }
+
+        }
+    }
+
+   
+}
+
+
+.wave-blue{
+    position: relative; /* or absolute */
+    z-index: 3;
+    margin-top: -140px; 
+    overflow: hidden;
+    margin-bottom: -6px;
+     img{
+     width: 100%;
+     height: 180px;
+      }
+}
+
+@media screen and (max-width: $phoneLandscape){
+    .wave-blue {
+        
+
+        img{
+            height:115px;
+            width: 170%;
+    }
+    }}
