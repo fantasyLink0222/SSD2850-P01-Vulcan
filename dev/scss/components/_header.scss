@@ -78,21 +78,22 @@ header{
   display: flex; /* Use flexbox to align items */
   justify-content:space-around; /* Even space distribution */
   align-items: center; /* Vertically align items in the middle */
-  padding: 10px 0; /* Add some padding above and below the nav items */
+  padding: 0 0; /* Add some padding above and below the nav items */
 }
 
 /* Style the individual navigation links */
 .nav-bar a {
   color: inherit; /* Inherit the white color from the nav-bar */
   text-decoration: none; /* Remove underline from links */
-  padding: 10px 15px; /* Add some padding to the links */
+ padding:30px 10px;
   transition: background-color 0.3s; /* Transition for the hover effect */
+
 }
 
 /* Add a hover effect on navigation links */
 .nav-bar a:hover {
-  background-color: #ffffff; /* Change background to white */
-  color: #000000; /* Change text color to black */
+  background-color: $text-color-blue; /* Change background to white */
+  
 }
 
 /* Add a container to wrap around the nav for layout purposes */
@@ -203,6 +204,7 @@ header{
   .nav-bar{
     width: 850px;
     height: 76px;
+    
   }
   
 }
@@ -221,6 +223,9 @@ header{
   .nav-bar{
     width: 720px;
     height: 40px;
+    a{
+      padding: 10px 10px;
+    }
   }
   .text-and-buttons h1{
    

@@ -64,21 +64,20 @@ header {
   display: flex; /* Use flexbox to align items */
   justify-content: space-around; /* Even space distribution */
   align-items: center; /* Vertically align items in the middle */
-  padding: 10px 0; /* Add some padding above and below the nav items */
+  padding: 0 0; /* Add some padding above and below the nav items */
 }
 
 /* Style the individual navigation links */
 .nav-bar a {
   color: inherit; /* Inherit the white color from the nav-bar */
   text-decoration: none; /* Remove underline from links */
-  padding: 10px 15px; /* Add some padding to the links */
+  padding: 30px 10px;
   transition: background-color 0.3s; /* Transition for the hover effect */
 }
 
 /* Add a hover effect on navigation links */
 .nav-bar a:hover {
-  background-color: #ffffff; /* Change background to white */
-  color: #000000; /* Change text color to black */
+  background-color: #009DDC; /* Change background to white */
 }
 
 /* Add a container to wrap around the nav for layout purposes */
@@ -189,6 +188,9 @@ header {
   .nav-bar {
     width: 720px;
     height: 40px;
+  }
+  .nav-bar a {
+    padding: 10px 10px;
   }
   .text-and-buttons h1 {
     font-size: 2em;
@@ -711,6 +713,231 @@ footer {
   }
   .row .footer-links .footer-list {
     align-items: center;
+  }
+}
+.info-wrapper {
+  position: relative;
+  display: grid;
+  margin-bottom: 4.6875em;
+  grid-template-areas: "a" "b" "c";
+}
+.info-wrapper .newsletter-signup {
+  background-color: rgb(190, 220, 239);
+  padding: 1.5625em 0.625em;
+}
+.info-wrapper .newsletter-signup form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.info-wrapper .newsletter-signup form .form-container {
+  display: flex;
+  flex-direction: column;
+}
+.info-wrapper .newsletter-signup form .form-container label {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #154a66;
+  font-size: 1.27em;
+  padding-bottom: 0.3125em;
+}
+.info-wrapper .newsletter-signup form .form-container .input-container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+.info-wrapper .newsletter-signup form .form-container .input-container input {
+  padding: 0.625em;
+  width: 100%;
+  border: none;
+  padding-left: 1.25em;
+  outline: none;
+}
+.info-wrapper .newsletter-signup form .form-container .input-container button {
+  padding: 0.5em 0.9375em;
+  background-color: #009DDC;
+  border: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 0.625em;
+}
+.info-wrapper .newsletter-signup form .form-container .input-container button:hover {
+  background-color: #555;
+}
+.info-wrapper .contact {
+  background-color: rgb(21, 74, 102);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 374px;
+}
+.info-wrapper .contact h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.1em;
+}
+.info-wrapper .contact a {
+  padding: 0.625em 0.875em;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #555;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 40px;
+}
+.info-wrapper .find-install {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("../../images/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 334px;
+  justify-content: center;
+  color: #555;
+  text-transform: uppercase;
+  padding-top: 1.25em;
+}
+.info-wrapper .find-install h2 {
+  margin: -50px;
+  padding: 0;
+  font-size: 2.1em;
+  line-height: 1em;
+  margin-bottom: 0.625em;
+  font-family: "Roboto", sans-serif;
+}
+.info-wrapper .find-install a {
+  padding: 0.625em 0.875em;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #555;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media (min-width: 48em) {
+  .info-wrapper {
+    margin-bottom: 1.25em;
+    grid-template-areas: "a a" "b c";
+    grid-template-columns: 1fr 1fr;
+  }
+  .info-wrapper .newsletter-signup {
+    grid-area: a;
+    padding: 1.25em;
+  }
+  .info-wrapper .newsletter-signup form {
+    display: flex;
+    align-items: center;
+  }
+  .info-wrapper .newsletter-signup form .form-container {
+    display: block;
+    margin: 0 auto;
+  }
+  .info-wrapper .newsletter-signup form .form-container label {
+    padding-right: 0.625em;
+    float: left;
+    padding-top: 0.125em;
+  }
+  .info-wrapper .newsletter-signup form .form-container .input-container input {
+    font-size: 1em;
+    width: 18.75em;
+    padding: 0.4375em 0.9375em;
+  }
+  .info-wrapper .newsletter-signup form .form-container .input-container button {
+    padding: 0em 0.9375em;
+  }
+  .info-wrapper .contact {
+    grid-area: b;
+    margin-bottom: 2.5em;
+  }
+  .info-wrapper .contact a {
+    background-color: #009DDC;
+    color: white;
+    border: none;
+    margin-top: 0.3125em;
+  }
+  .info-wrapper .contact a:hover {
+    background-color: #555;
+    color: white;
+  }
+  .info-wrapper .find-install {
+    grid-area: c;
+    width: 100%;
+    background-size: cover;
+  }
+  .info-wrapper .find-install a {
+    background-color: #009DDC;
+    color: white;
+    border: none;
+  }
+}
+@media (min-width: 64em) {
+  .info-wrapper {
+    margin-bottom: 0.625em;
+  }
+  .info-wrapper .contact h2 {
+    font-size: 2.5em;
+  }
+  .info-wrapper .find-install h2 {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 90em) {
+  .info-wrapper .newsletter-signup form .form-container label {
+    padding-top: 0em;
+    font-size: 1.7em;
+  }
+  .info-wrapper .newsletter-signup form .form-container .input-container input {
+    width: 31.25em;
+    margin-top: 0.125em;
+  }
+  .info-wrapper .contact {
+    height: 500px;
+  }
+  .info-wrapper .contact h2 {
+    font-size: 2.7em;
+    padding-bottom: 0.9375em;
+  }
+  .info-wrapper .contact a {
+    padding: 0.625em 2.5em;
+  }
+  .info-wrapper .find-install {
+    height: 500px;
+  }
+  .info-wrapper .find-install h2 {
+    font-size: 2.7em;
+    padding-bottom: 1.25em;
+  }
+}
+
+.wave-blue {
+  position: relative; /* or absolute */
+  z-index: 3;
+  margin-top: -140px;
+  overflow: hidden;
+  margin-bottom: -6px;
+}
+.wave-blue img {
+  width: 100%;
+  height: 180px;
+}
+
+@media screen and (max-width: 48em) {
+  .wave-blue img {
+    height: 115px;
+    width: 170%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
