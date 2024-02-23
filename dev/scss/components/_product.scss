@@ -58,7 +58,7 @@
             height: auto;
             vertical-align: middle;
             border: 0;
-            overflow: clip;
+            overflow: hidden;
         }
 
         .detail{
@@ -139,10 +139,7 @@ div {
     display: block;
 }
 
-html{
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
+
 
 @media screen and (max-width:767px){
     .hidden-xs{

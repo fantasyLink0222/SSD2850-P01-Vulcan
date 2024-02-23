@@ -8,7 +8,7 @@
 }
 
 .slideshow img {
-  width: auto;
+  width: 100%;
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any default inline spacing */
 }
@@ -25,7 +25,6 @@
   
   
 }
-
 
 /*top menu*/
 
@@ -72,58 +71,50 @@ header{
   
 .nav-bar {
   font-family: $body-font; 
-  background: rgba(75, 75, 75, 0.781); /* Semi-transparent black background */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   color: #fff; /* White text color */
   text-transform: uppercase; /* Make all menu items uppercase */
-  font-weight: 300; /* Make the font a bit bolder */
+  font-weight: 600; /* Make the font a bit bolder */
   display: flex; /* Use flexbox to align items */
   justify-content:space-around; /* Even space distribution */
   align-items: center; /* Vertically align items in the middle */
-
+  padding: 0 0; /* Add some padding above and below the nav items */
 }
 
 /* Style the individual navigation links */
 .nav-bar a {
   color: inherit; /* Inherit the white color from the nav-bar */
   text-decoration: none; /* Remove underline from links */
-
-
  padding:30px 10px;
-
   transition: background-color 0.3s; /* Transition for the hover effect */
 
 }
 
 /* Add a hover effect on navigation links */
 .nav-bar a:hover {
-
   background-color: $text-color-blue; /* Change background to white */
   
-
 }
 
 /* Add a container to wrap around the nav for layout purposes */
 .nav-container {
-  
+ 
   position: relative;
   margin-top: 10px;
-  padding-top: 20px;
   z-index: 2; /* Ensure it's above other content */
 }
 
-.text-and-buttons {
+.text-and-buttons{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
-  padding: 1.5rem;
-  width: auto;
-  flex-wrap: wrap;
 
+  margin-top: 100px;
+  width: 100%;
   h1{
     font-family: $heading-font;
-    font-size: 4.5em;
+    font-size: 3.0em;
     color: $text-color-light;
     text-align: center;
     margin: 0 0 30px;
@@ -135,9 +126,7 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
     align-items: center;
-
 
     
     gap: 50px;
@@ -202,8 +191,6 @@ header{
     width: 850px;
     height: 76px;
   }
-
-  
   .vulcan-logo{
     width: 213px;
     height: 88px;
@@ -228,13 +215,11 @@ header{
     height: 123.64px;
     background-size: 213px 123.64px;
   }
-
   
   }
 
 @media screen and (max-width:$tabletLandscape ) {
   
-
   .nav-bar{
     width: 720px;
     height: 40px;
@@ -243,67 +228,14 @@ header{
     }
   }
   .text-and-buttons h1{
-
    
-  }
-
-  
-}
-
-@media screen and (max-width: 410px) {
-  .text-and-buttons {
+    font-size: 2.0em;
     
-
-    h1{
-      font-size: 2rem;
-
-    }
-    
-   
-  }
-
-  
-
-  
-}
-
-@media screen and (max-width: 348px) {
-  .text-and-buttons {
-    font-size: 1rem;
-
-    h1{
-      font-size: 2rem;
-
-    }
-    .btn{
-      button{
-        padding: 10px 10px 10px;
-        font-size: 0.8em;
-      }
-    
-   
-  }
-  
-}
-}
-
-
-@media screen and (max-width: 400) {
-  .text-and-buttons {
     text-align: center;
     margin: 0 0 20px;
     padding: 0;
     width: 80%;
-
   }
-
-  .overlay-content {
-    width: 100%;
-    
-    
-  }
-
-  
 
   
 }
@@ -311,13 +243,13 @@ header{
 
 @media screen and (max-width: $phoneLandscape){
 
-
   .btn{
     width: 200px;
   }
   .wave-white{
+
     img{
-      width: 100%;
+      width: 140%;
       height: 100px;
     }
   }

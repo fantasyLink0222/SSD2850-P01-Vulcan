@@ -3,7 +3,7 @@
 }
 
 .slideshow img {
-  width: auto;
+  width: 100%;
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove any default inline spacing */
 }
@@ -57,57 +57,47 @@ header {
 
 .nav-bar {
   font-family: "Roboto", sans-serif;
-  background: rgba(75, 75, 75, 0.781); /* Semi-transparent black background */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   color: #fff; /* White text color */
   text-transform: uppercase; /* Make all menu items uppercase */
-  font-weight: 300; /* Make the font a bit bolder */
+  font-weight: 600; /* Make the font a bit bolder */
   display: flex; /* Use flexbox to align items */
   justify-content: space-around; /* Even space distribution */
   align-items: center; /* Vertically align items in the middle */
-
-  padding: 15px; /* Add some padding above and below the nav items */
-
+  padding: 0 0; /* Add some padding above and below the nav items */
 }
 
 /* Style the individual navigation links */
 .nav-bar a {
   color: inherit; /* Inherit the white color from the nav-bar */
   text-decoration: none; /* Remove underline from links */
-
   padding: 30px 10px;
-
   transition: background-color 0.3s; /* Transition for the hover effect */
 }
 
 /* Add a hover effect on navigation links */
 .nav-bar a:hover {
-
-
   background-color: #009DDC; /* Change background to white */
-
 }
 
 /* Add a container to wrap around the nav for layout purposes */
 .nav-container {
   position: relative;
   margin-top: 10px;
-  padding-top: 20px;
   z-index: 2; /* Ensure it's above other content */
 }
 
 .text-and-buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 100px;
-  padding: 1.5rem;
-  width: auto;
-  flex-wrap: wrap;
+  width: 100%;
 }
 .text-and-buttons h1 {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 4.5em;
+  font-size: 3em;
   color: white;
   text-align: center;
   margin: 0 0 30px;
@@ -119,10 +109,8 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
   align-items: center;
   gap: 50px;
-
 }
 .text-and-buttons .btn button {
   background-color: transparent;
@@ -196,7 +184,6 @@ header {
     background-size: 213px 123.64px;
   }
 }
-
 @media screen and (max-width: 64em) {
   .nav-bar {
     width: 720px;
@@ -205,32 +192,12 @@ header {
   .nav-bar a {
     padding: 10px 10px;
   }
-
   .text-and-buttons h1 {
-    font-size: 2rem;
-  }
-}
-@media screen and (max-width: 348px) {
-  .text-and-buttons {
-    font-size: 1rem;
-  }
-  .text-and-buttons h1 {
-    font-size: 2rem;
-  }
-  .text-and-buttons .btn button {
-    padding: 10px 10px 10px;
-    font-size: 0.8em;
-  }
-}
-@media screen and (max-width: 400) {
-  .text-and-buttons {
+    font-size: 2em;
     text-align: center;
     margin: 0 0 20px;
     padding: 0;
     width: 80%;
-  }
-  .overlay-content {
-    width: 100%;
   }
 }
 @media screen and (max-width: 48em) {
@@ -238,7 +205,7 @@ header {
     width: 200px;
   }
   .wave-white img {
-    width: 100%;
+    width: 140%;
     height: 100px;
   }
 }
@@ -704,8 +671,51 @@ footer {
   height: auto;
   background-size: auto 100%;
 }
+.row .footer-logo .vulcan-logo-ft {
+  width: 213px;
+  height: auto;
+}
+.row .footer-links {
+  display: flex;
+  margin-left: 6em;
+}
+.row .footer-links .footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.row .footer-links .footer-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+.row .footer-links .footer-list li a:hover {
+  color: #005476;
+}
 
-
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .row .footer-links {
+    margin-left: 0;
+    margin-top: 20px;
+    align-content: center;
+  }
+  .row .footer-links .footer-list {
+    align-items: center;
+  }
+}
 .order-block {
   display: flex;
   justify-content: center;
@@ -755,7 +765,7 @@ footer {
   height: auto;
   vertical-align: middle;
   border: 0;
-  overflow: clip;
+  overflow: hidden;
 }
 .order-block .home-product .detail {
   display: inline-block;
@@ -806,11 +816,6 @@ footer {
 
 div {
   display: block;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
 }
 
 @media screen and (max-width: 767px) {
@@ -910,83 +915,6 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-form {
-  display: block;
-  margin-top: 0em;
-}
-
-.sign-up {
-  background: #b8ddf1;
-}
-.sign-up .container {
-  padding-top: 22px;
-  padding-bottom: 26px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.sign-up label {
-  color: #154a66;
-  font-size: 20px;
-  line-height: 24px;
-  margin: 0 0 17px;
-  font-weight: normal;
-  font-family: "Roboto Condensed", sans-serif;
-  display: inline-block;
-  max-width: 100%;
-  text-align: center;
-  text-transform: none;
-}
-.sign-up .btn {
-  width: 94px;
-  float: right;
-  padding: 5px;
-  font-weight: bolder;
-  font-size: 16px;
-  line-height: 20px;
-  border-radius: 0;
-  text-transform: uppercase;
-  background-color: #009ddc;
-  border-color: #009ddc;
-  color: white;
-  display: inline-block;
-  margin-bottom: 0;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  border: 1px solid transparent;
-  white-space: nowrap;
-}
-.sign-up .input-holder {
-  overflow: hidden;
-  padding: 0 8px 0 0;
-}
-
-.row {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  box-shadow: none;
-  border-radius: 0;
-  font-size: 12px;
-  line-height: 17px;
-  height: 33px;
-  border: 0;
-  padding: 8px 19px 7px;
-  color: #504f4f;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 .user-block {
@@ -1099,52 +1027,8 @@ form {
 }
 .contact-us .contact-box .holder {
   padding: 53px 30px 95px;
-
-.row .footer-logo .vulcan-logo-ft {
-  width: 213px;
-  height: auto;
-}
-.row .footer-links {
-  display: flex;
-  margin-left: 6em;
-}
-.row .footer-links .footer-list {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  text-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-}
-.row .footer-links .footer-list li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2em;
-  transition: color 0.3s;
-}
-.row .footer-links .footer-list li a:hover {
-  color: #005476;
 }
 
-@media screen and (max-width: 768px) {
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
-  .row .footer-links {
-    margin-left: 0;
-    margin-top: 20px;
-    align-content: center;
-  }
-  .row .footer-links .footer-list {
-    align-items: center;
-  }
-}
 .info-wrapper {
   position: relative;
   display: grid;
@@ -1369,6 +1253,5 @@ form {
     height: 115px;
     width: 170%;
   }
-
 }
 /*# sourceMappingURL=styles.css.map */
