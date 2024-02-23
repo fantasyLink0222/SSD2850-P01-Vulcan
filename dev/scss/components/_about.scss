@@ -1,0 +1,63 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.history-info {
+    color: #fff;
+    background: url('../../images/bg-section-about-us.jpg') no-repeat center center/cover;
+    position: relative;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+    z-index: 1;
+    padding-bottom: 3rem;
+
+
+    .container {
+        
+        padding:1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+        // Override if necessary
+        padding-top: 150px !important;
+    }
+
+    .col, .text {
+        position: relative;
+        padding: 20px;
+        z-index: 2; // Ensure text is above the background
+    }
+
+    .text {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 0 50px 60px;
+        
+        
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .btn {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 10px 20px; // Adjusted for button appearance
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid #fff;
+        text-decoration: none; // Remove underline
+        cursor: pointer;
+    }
+}
+
+.col {
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    font-size: 17.5px;
+
+}

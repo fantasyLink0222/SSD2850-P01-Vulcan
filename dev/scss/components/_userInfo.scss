@@ -1,0 +1,134 @@
+.user-block {
+    font-size: 0;
+    line-height: 0;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+    display: block;
+  
+    h2 {
+      font-size: 30px;
+      line-height: 36px; // Adjusted for better readability
+      margin: 0 0 12px;
+      color: #504f4f; // Unified color for h2 elements
+    }
+  
+    .location, .contact-us {
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .location {
+      color: #252525;
+  
+      .img-holder {
+        position: relative;
+        width: 100%; // Simplified for responsiveness
+      }
+  
+      .img-frame {
+        width: 100%; // Ensure image container fills parent
+        position: relative;
+      }
+  
+      img {
+        max-width: 100%; // Ensure image is responsive
+        height: auto; // Maintain aspect ratio
+      }
+
+      .caption{
+        white-space: normal;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+        width: 100%;
+        letter-spacing: 0;
+      }
+      
+      .caption-holder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+      }
+  
+      .location-box {
+        padding: 15px;
+        text-transform: uppercase;
+  
+        h2 {
+          padding-bottom: 20px;
+        }
+      }
+  
+      .btn {
+        background: none;
+        color: #504f4f;
+        border: 1px solid #000000;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 11px 10px;
+        min-width: 182px;
+        font-weight: 700;
+        border-radius: 0;
+      }
+    }
+}
+    .contact-us {
+      background: #154a66;
+      color: #fff;
+      font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+      text-transform: uppercase;
+      font-size: medium;
+      
+    
+      .btn{
+        background: none;
+        color: #fff;
+        border-color: #fff;
+        border: 1px solid white;
+        text-decoration: none; // Remove underline
+        font-size: 16px;
+        line-height: 20px;
+        padding: 11px 10px 10px;
+        font-weight: 700;
+
+      }
+
+      h2{
+        color: #fff;
+        padding-bottom: 20px;
+      }
+  
+      .contact-box {
+        height: 398px;
+        padding: 15px;
+        white-space: nowrap;
+        text-align: center;
+        letter-spacing: -10px;
+        
+        > * {
+            white-space: normal;
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 100%;
+            width: 100%;
+            letter-spacing: 0;
+        }
+        
+  
+        .holder {
+          padding: 53px 30px 95px;
+          
+        }
+
+       
+      }
+    }
+  
+  

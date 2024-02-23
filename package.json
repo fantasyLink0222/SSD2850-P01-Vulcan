@@ -1,5 +1,5 @@
 {
-  "name": "ssd-2850-p01-Vulcan",
+  "name": "ssd-2850-p01-vulcan",
   "version": "1.0.0",
   "description": "Structure and Gulpfile for Coding Challenge Project",
   "main": "index.html",
@@ -24,5 +24,6 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify-es": "^3.0.0",
     "postcss": "^8.4.26"
-  }
+  },
+  "keywords": []
 }
