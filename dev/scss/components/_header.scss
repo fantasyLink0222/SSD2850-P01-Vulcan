@@ -5,6 +5,7 @@
 
 .slideshow {
   position: relative;
+  
 }
 
 .slideshow img {
@@ -18,7 +19,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  
   z-index: 2; /* Positioned above the slideshow images */
   /* Add more styling for your overlay content here */
   align-items: center;
@@ -109,12 +110,11 @@ header{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  margin-top: 100px;
+  padding: 46px 0 151px;
   width: 100%;
   h1{
     font-family: $heading-font;
-    font-size: 3.0em;
+    font-size: 2.8em;
     color: $text-color-light;
     text-align: center;
     margin: 0 0 30px;
@@ -127,9 +127,8 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    
-    gap: 50px;
+    margin: 20px;
+   
     button{
       background-color: transparent;
       font-family: $nav-font;
@@ -203,8 +202,7 @@ header{
 @media screen and (min-width: $tabletLandscape){
   .nav-bar{
     width: 850px;
-    height: 76px;
-    
+    height: 76px;  
   }
   
 }
@@ -216,8 +214,10 @@ header{
     background-size: 213px 123.64px;
   }
   
+  .text-and-buttons .btn{
+    gap: 50px;
   }
-
+}
 @media screen and (max-width:$tabletLandscape ) {
   
   .nav-bar{
@@ -227,15 +227,20 @@ header{
       padding: 10px 10px;
     }
   }
-  .text-and-buttons h1{
+  .text-and-buttons {
+    padding: 140px 0 170px;
+    h1{
    
-    font-size: 2.0em;
-    
-    text-align: center;
-    margin: 0 0 20px;
-    padding: 0;
-    width: 80%;
+      font-size: 2.0em;
+      
+      text-align: center;
+      margin: 0 0 20px;
+      padding: 0;
+      width: 80%;
+    }
   }
+  
+ 
 
   
 }
@@ -243,9 +248,26 @@ header{
 
 @media screen and (max-width: $phoneLandscape){
 
-  .btn{
-    width: 200px;
+  .text-and-buttons {
+
+    padding: 140px 0 170px;
+    h1{
+   
+      font-size: 1.8em;
+      text-align: center;
+      margin: 0 0 20px;
+      padding: 0;
+      width: 80%;
+    }
+
   }
+  .btn{
+    
+    gap: 20px;
+    width: 300px;
+  }
+  
+  
   .wave-white{
 
     img{
