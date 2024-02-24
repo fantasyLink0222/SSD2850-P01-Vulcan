@@ -12,17 +12,7 @@
 @use "./components/userinfo";
 
 @use "./components/footer-upper";
+@use "./components/body";
+@use "./components/wave-middle";
 
 
-
-* html {
-    width: 100%;
-}
-
-body{
-    width: 100%;
-}
-
-.wrapper{
-    width: 100%;
-}

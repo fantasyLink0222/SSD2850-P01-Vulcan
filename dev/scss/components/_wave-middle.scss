@@ -1,0 +1,24 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.wave-middle {
+    position: relative; /* or absolute */
+    z-index: 3;
+
+    margin-top: -60px; 
+    overflow: hidden;
+    margin-bottom: -160px;
+    transform: rotate(180deg);
+     img{
+     width: 100%;
+     height: 140px;
+      }
+    } 
+
+ @media (max-width: $phoneLandscape){
+      .wave-middle img{
+          width: 140%;
+          height: 100px;
+        }
+      
+    }
