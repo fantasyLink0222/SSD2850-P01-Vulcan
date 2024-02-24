@@ -6,6 +6,9 @@
     justify-content: center;
     gap: 40px;
     margin-top: 15px;
+    margin:auto;
+    padding: auto;
+    
 
     .container{
         padding-top: 33px;
@@ -23,6 +26,7 @@
         font-family: $nav-font;
         line-height: 28px;
         margin: 0 0 15px;
+       
         
         }
 
@@ -96,7 +100,11 @@
         font-weight: 700;
         margin: 0 0 15px;
         text-transform: uppercase;
-        border-top: 1px solid #ccc;
+        border-top: 1px solid #979797;
+        padding-top: 15px;
+
+        
+       
         
     }
 
@@ -115,11 +123,8 @@
 
     h3 {
         display: block;
-        font-size: 1.17em;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
+        font-size: 1.0em;
+
         font-weight: bold;
 
     }
@@ -127,6 +132,7 @@
     
 
 }
+
 
 .texttitle{
     display: flex;
@@ -141,13 +147,83 @@ div {
 
 
 
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
     .hidden-xs{
         display: none !important;
     }
 
+    
+    
+
 }
 
 
+
+// Assuming this is within your existing media query for larger screens
+@media (min-width: 768px) {
+
+    
+
+    
+
+    .row {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        width: auto;
+        justify-content: space-evenly;
+        
+
+        .home-product {
+            flex: 1; // Causes each .home-product to flexibly fill the available space
+            max-width: calc(33.333% - 20px); // Adjust this value based on desired gutter space
+
+            // If you have specific padding/margins for .home-product, adjust them here
+
+            .img-holder{
+                display: flex;
+                justify-self: space-evenly;
+                width: 100%;
+                
+              
+            }
+
+            .col{
+
+                border-top: 0px solid #ffffff00;
+
+
+            }
+            .detail{
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+
+            h3 a{
+                color: #009ddc;
+            }
+
+            .view{
+                color: #616161;;
+                font-size: 16px;
+                line-height: 18px;
+                text-decoration: underline;
+            }
+
+            
+        }
+    }
+
+
+    // Your existing styles for larger screens
+    .order-block h2 {
+        color: #154a66;
+    }
+
+    
+
+    
+}
 
 
