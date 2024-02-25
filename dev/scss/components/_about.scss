@@ -3,12 +3,23 @@
 
 .history-info {
     color: #fff;
-    background: url('../../images/bg-section-about-us.jpg') no-repeat center center/cover;
+    background: url('/dev/images/bg-section-about-us.jpg') no-repeat center center/cover;
     position: relative;
     font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
     z-index: 1;
     padding-bottom: 3rem;
 
+    .wave-blue{
+        position: absolute; /* or absolute */
+        z-index: 3;
+        margin-top: -65px; 
+        overflow: hidden;
+        margin-bottom: -6px;
+         img{
+         width: 100%;
+         height: 180px;
+          }
+    }
 
     .container {
         
